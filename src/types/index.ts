@@ -56,7 +56,7 @@ export interface Education{
     logoURL: string;
     level: string;
     name_school:string;
-    startDate: string;
+    startDate?: string;
     endDate?: string;
     city: string;
     description:string;
