@@ -4,3 +4,8 @@ body {
     color: #eef0f6; /* color de texto base */
     font-family: system-ui, -apple-system, sans-serif;
 }
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+}
