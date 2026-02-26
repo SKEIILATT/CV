@@ -11,7 +11,7 @@ export const principal: Principal = {
     github:"https://github.com/SKEIILATT",
     linkedin:"https://www.linkedin.com/in/javaguti",
     avatar:avatar,
-    semester: "7mo semester",
+    semester: "7mo semestre",
     city: "Guayaquil",
     country: "Ecuador",
     university: "ESPOL",

@@ -3,9 +3,9 @@ import { useState } from "react";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); //Estado del menú hamburguesa
   return (
-    <nav className="fixed top-0 right-0 left-0 z-50 bg-[#060b18] flex flex-col w-full ">
-      <div className="flex justify-between px-4 py-4">
-        <a className="text-[#f97316] font-bold" href="#home">
+    <nav className="fixed top-0 right-0 left-0 z-50  bg-[#060b18] flex flex-col w-full md:px-55 ">
+      <div className="flex justify-between px-4 py-4 ">
+        <a className="text-[#f97316] font-bold ml-2" href="#home">
           JG.
         </a>
         <button
@@ -17,7 +17,7 @@ export const Navbar = () => {
           <div className=" h-0.5 w-6 bg-white"></div>
         </button>
 
-        <ul className="hidden md:flex gap-6">
+        <ul className="hidden md:flex gap-6 mr-2 text-[#7b8ba8] text-sm font-medium ">
           <li>
             <a
               className="text-gray-300 hover:text-white transition-colors"
