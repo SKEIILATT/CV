@@ -59,7 +59,9 @@ export const Navbar = () => {
             </a>
           </li>
         </ul>
+        
       </div>
+     
       <ul
         className={`${isOpen ? "flex flex-col" : "hidden"} md:hidden bg-[#0e1525] mt-3 w-full px-4 py-4`}
       >
@@ -94,6 +96,7 @@ export const Navbar = () => {
           <a href="#contact">Contáctame</a>
         </li>
       </ul>
+      
     </nav>
   );
 };

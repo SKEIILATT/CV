@@ -29,7 +29,7 @@ export const about_mentoring: AboutFeature = {
 }
 
 export const about: About = {
-    title: "Transformando datos en decisiones",
-    description: " Estudiante de Ciencias de la Computación (7mo semestre) en ESPOL, enfocado en Data Science, Analytics y Desarrollo Web FullStack. Con experiencia en construir soluciones técnicas, análisis exploratorio de datos y visualización de datos.Mentalidad analítica fuerte para transformar datos en decisiones y resolver problemas complejos en entornos dinámicos.",
+    title: "Transformando datos en decisiones.",
+    description: " Estudiante de Ciencias de la Computación (7mo semestre) en ESPOL, enfocado en Data Science, Analytics y Desarrollo Web FullStack. Con experiencia en construir soluciones técnicas, análisis exploratorio de datos y visualización de datos. Mentalidad analítica fuerte para transformar datos en decisiones y resolver problemas complejos en entornos dinámicos.",
     about_features: [about_data, about_fullstack, about_mentoring, about_research]
 }
