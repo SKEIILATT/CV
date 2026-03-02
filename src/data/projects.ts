@@ -16,7 +16,7 @@ export const projects: Project[] = [
     {
         type_project: "Lenguaje de bajo nivel",
         title_project: "Anagrama MASM",
-        description: "Utilidad en ensamblador (MASM/TASM) que determina si dos cadenas son anagramas.",
+        description: "Utilidad en lenguaje ensamblador (MASM/TASM) que verifica si dos cadenas son anagramas, ignorando diferencias de mayúsculas/minúsculas y caracteres no alfabéticos.",
         technologies: ["Ensamblador"],
         image:anagrama,
         github:"https://github.com/SKEIILATT/proyecto-Anagrama?tab=readme-ov-file",

@@ -37,11 +37,13 @@ export interface Project{
     demo?:string;
 }
 // Skills
-export type SkillCategory = 'datascience' | 'frontend' | 'backend' | 'tools' | 'softskills'
+export type SkillCategory = 'Data Science' | 'Frontend' | 'Backend' | 'Tools' 
 
 export interface Skill{
     name: string;
     category: SkillCategory;
+    icon?: `${string}:${string}`; 
+    color?:string;
 }
 //Experience
 export interface Experience{
