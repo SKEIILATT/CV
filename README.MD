@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# New CV - Portafolio Personal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicacion web de portafolio/CV construida con React + TypeScript, enfocada en mostrar perfil profesional, experiencia, formacion, proyectos y contacto en una sola pagina responsive.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- Vite 7
+- Tailwind CSS 4
+- Iconify + Lucide React (iconos)
+- ESLint 9
 
-## React Compiler
+## Secciones del sitio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Hero
+- Sobre Mi
+- Proyectos
+- Habilidades
+- Experiencia (timeline)
+- Educacion
+- Contactame
+- Footer
 
-## Expanding the ESLint configuration
+## Scripts disponibles
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
+npm run lint
+npm run build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Ejecutar en local
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Instalar dependencias:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+2. Levantar servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+3. Abrir en navegador:
+
+```text
+http://localhost:5173
+```
+
+## Estructura principal
+
+```text
+src/
+  assets/                # Imagenes e iconos
+  components/
+    layout/              # Navbar y Footer
+    sections/            # Secciones del CV
+  data/                  # Informacion editable del perfil
+  types/                 # Tipos TypeScript
+  App.tsx
+  index.css
+```
+
+## Donde editar el contenido
+
+Si quieres actualizar informacion sin tocar componentes, edita estos archivos:
+
+- `src/data/principal.ts` -> nombre, titulo, bio, ubicacion, redes, correo.
+- `src/data/about.ts` -> descripcion personal y highlights.
+- `src/data/projects.ts` -> proyectos y tecnologias.
+- `src/data/skills.ts` -> stack tecnico por categoria.
+- `src/data/experience.ts` -> experiencia laboral/academica (timeline).
+- `src/data/education.ts` -> formacion academica.
+
+## Build de produccion
+
+```bash
+npm run build
+```
+
+El resultado se genera en `dist/`.
+
+## Notas
+
+- Proyecto optimizado para desktop y mobile.
+- Navegacion por anclas (`#about`, `#projects`, `#skills`, `#experience`, `#education`, `#contact`).
+- Animaciones suaves de entrada y hover, con respeto a `prefers-reduced-motion`.
